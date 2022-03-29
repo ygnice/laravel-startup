@@ -22,10 +22,8 @@ services:
         networks:
             - sail
         depends_on:
-            - mysql
+            - pgsql
             - redis
-            - meilisearch
-            - selenium
     pgsql:
         image: 'postgres:12.4'
         ports:
