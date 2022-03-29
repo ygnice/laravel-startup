@@ -1,0 +1,21 @@
+name: Insights
+
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+      - '.chglog/*'
+      - '.github/config.yml'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.gitignore'
+      - '.styleci.yml'
+      - '_ide_helper.php'
+      - 'docker-compose.yml'
+      - 'Makefile'
+      - 'phpstan.neon.dist'
+
+jobs:
+  phpinsights:
+    name: PHP Insights
+    uses: XNXKTech/workflows/.github/workflows/laravel-insights.yml@main
